@@ -32,13 +32,12 @@ exec 1<> /tmp/output_1.txt
 
 
 file=$1
-re='^[0-9]+$'
+re='^-?[0-9]+$'
 
 declare -a visto
 
-
 while read line; do 
-	if [[ "${line:0:1}" =~ $re ]]; then
+	if [[ $(echo $line | cut -d. -f1) =~ $re ]]; then
 		# start with a number, so it is probably a IP
 		IFS=' ' read -ra line_split <<< $(echo "${line}" |tr '\t' ' ')
 		ip=${line_split[0]}
