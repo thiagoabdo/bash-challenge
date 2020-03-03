@@ -1,3 +1,14 @@
+# Feedback or issues:
+:one:
+* It was not clear if the script should keep a valid duplicated IP address, my version keeps it.
+* I would have used python for solving this because there we have a function to check IP validity.
+* Bash Version: GNU bash, version 5.0.16(1)-release
+
+:two:
+* Some other fields have no fixed length, we could use an array/hash to save the maximum sizes and then add the right amount of spaces to them.
+* I am considering that after the '#' everything is a commentary.
+* Perl Version: perl 5, version 30, subversion 0 (v5.30.0)
+
 # Challenge:
 
 :one: Using bash write a script to find and remove duplicated fake IP addresses lines of ["control_file.txt"](/control_file.txt) file and save the output at /tmp/output_1.txt
