@@ -33,9 +33,9 @@ close(FH);
 open(FH, '>', '/tmp/output_2.txt');
 foreach(@o_lines){
 	my $line = $_;
-	if ($line =~ /^\d/){
+	if ($line =~ /^[\d\-]/){
 		chomp($line);
-		my @first_split = split '#', $line;
+		my @first_split = split '#', $line, 2;
 		my @split_line = split ' ', $first_split[0]; 
 		my $length = length $split_line[0];
 		$split_line[0] .= (" " x ($max_ip_size - length($split_line[0])));
