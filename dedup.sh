@@ -21,7 +21,7 @@ fake_ip() {
 	return $false
 }
 
-
+rm /tmp/output_1.txt 2> /dev/null
 # Redirect STDOUT
 # Close STDOUT file descriptor
 exec 1<&-
