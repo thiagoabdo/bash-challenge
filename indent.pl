@@ -12,6 +12,7 @@ my $max_host_size = 0;
 while(<FH>){
 	my $line = $_;
 	$line =~ s/\t/ /g;
+	$line =~ s/\r//g;
 	if ($line =~ /^\d/){
 		$line =~ s/ +/ /g;
 
